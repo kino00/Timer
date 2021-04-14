@@ -2,7 +2,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import java.util.ArrayList;
-import java.time.LocalDateTime;
 
 class Viewer extends JFrame{
     private JPanel panel;
@@ -28,7 +27,7 @@ class Viewer extends JFrame{
     public void delList(TimeDate tDate){
         list.removeIf(l -> l.getTime() <= 0);
     }
-    public void upDate(){
+    public synchronized void upDate(){
         StringBuilder buf = new StringBuilder();
         buf.append("<html><body><h2>");
         for(TimeDate t: list){

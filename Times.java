@@ -2,7 +2,6 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.Scanner;
 import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
 
 public class Times{
     private Viewer view;
@@ -45,20 +44,3 @@ public class Times{
         }
     }
 }
-/*
-public class TimersTask extends TimerTask{
-    private int time;
-    
-    TimersTask(int aTime) {
-        time = aTime;
-    }
-    
-    public void run() {
-        time--;
-        System.out.println(time/60 + ":" + time%60);
-        if(time <= 0){
-            timer.cancel();
-        }
-    }
-}*/
-
